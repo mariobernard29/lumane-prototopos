@@ -1,0 +1,339 @@
+<!-- Inicio - Lumane -->
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUMANE - Elegancia Cotidiana</title>
+<link rel="icon" type="image/png" href="icon%20lumane.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f9f9f9",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#5f5e5e",
+                      "on-secondary-container": "#626361",
+                      "surface-dim": "#dadada",
+                      "on-primary-container": "#858383",
+                      "secondary-container": "#e0e0dd",
+                      "on-tertiary-container": "#848480",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#464743",
+                      "surface-container": "#eeeeee",
+                      "surface-container-high": "#e8e8e8",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface": "#f9f9f9",
+                      "secondary-fixed-dim": "#c7c6c4",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-surface": "#1a1c1c",
+                      "tertiary-fixed": "#e4e2dd",
+                      "on-tertiary-fixed": "#1b1c19",
+                      "primary-container": "#1c1b1b",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#c7c7c2",
+                      "on-error": "#ffffff",
+                      "background": "#f9f9f9",
+                      "outline-variant": "#c4c7c7",
+                      "on-primary": "#ffffff",
+                      "text-muted": "#6B6B68",
+                      "focus-ring": "#1F5E84",
+                      "primary": "#000000",
+                      "primary-fixed": "#e5e2e1",
+                      "on-background": "#1a1c1c",
+                      "secondary": "#5e5f5c",
+                      "outline": "#747878",
+                      "inverse-primary": "#c8c6c5",
+                      "tertiary-container": "#1b1c19",
+                      "secondary-fixed": "#e3e2df",
+                      "tertiary": "#000000",
+                      "on-secondary-fixed-variant": "#464745",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary-fixed": "#1b1c1a",
+                      "surface-container-highest": "#e2e2e2",
+                      "sale-accent": "#A13E34",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "surface-container-low": "#f3f3f4",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed": "#1c1b1b",
+                      "earth-warmth": "#6F4D30",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter-mobile": "16px",
+                      "unit": "4px",
+                      "margin-desktop": "32px",
+                      "container-max": "1440px",
+                      "section-gap-md": "64px",
+                      "gutter-desktop": "24px",
+                      "margin-mobile": "20px",
+                      "section-gap-lg": "96px"
+              },
+              "fontFamily": {
+                      "price-display": [
+                              "DM Sans"
+                      ],
+                      "body-lg": [
+                              "DM Sans"
+                      ],
+                      "headline-sm": [
+                              "DM Sans"
+                      ],
+                      "display-lg-mobile": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-md": [
+                              "DM Sans"
+                      ],
+                      "headline-md": [
+                              "Libre Caslon Text"
+                      ],
+                      "display-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "label-caps": [
+                              "DM Sans"
+                      ]
+              },
+              "fontSize": {
+                      "price-display": [
+                              "16px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "56px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface w-full top-0 sticky border-b border-outline-variant dark:border-outline z-50">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<!-- Mobile Menu Icon (Placeholder for interaction) -->
+<button aria-label="Abrir menú" class="lg:hidden text-primary dark:text-on-surface hover:text-primary dark:hover:text-on-surface transition-all duration-150 scale-95 active:opacity-80 transition-transform">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden lg:flex space-x-gutter-desktop font-label-caps text-label-caps">
+<a class="text-secondary dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="lumane1-catalogo.html">ROPA</a>
+<a class="text-secondary dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="lumane1-catalogo.html">VESTIDOS</a>
+<a class="text-secondary dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="lumane1-catalogo.html">SETS</a>
+<a class="text-secondary dark:text-on-surface-variant hover:text-primary transition-colors duration-200" href="lumane1-catalogo.html">ACCESORIOS</a>
+</div>
+<!-- Back to index (quiet corner link) -->
+<a class="hidden sm:inline-block absolute top-2 right-margin-mobile md:right-margin-desktop font-label-caps text-[10px] tracking-widest text-secondary dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200" href="index.html">← VOLVER AL ÍNDICE</a>
+<!-- Brand Logo -->
+<a aria-current="page" class="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center" href="lumane1-inicio.html">
+<img alt="LUMANE" class="h-10 md:h-12 w-auto object-contain" src="Lumane_Logotipo-01-convertido-de-webp.png"/>
+</a>
+<!-- Trailing Icons -->
+<div class="flex space-x-gutter-mobile md:space-x-gutter-desktop text-primary dark:text-on-surface">
+<button aria-label="Buscar" class="hover:text-primary dark:hover:text-on-surface transition-all duration-150 scale-95 active:opacity-80 transition-transform">
+<span class="material-symbols-outlined text-[24px]" data-icon="search">search</span>
+</button>
+<button aria-label="Cuenta" class="hover:text-primary dark:hover:text-on-surface transition-all duration-150 scale-95 active:opacity-80 transition-transform hidden md:block">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+</button>
+<a aria-label="Carrito de compras" class="hover:text-primary dark:hover:text-on-surface transition-all duration-150 scale-95 active:opacity-80 transition-transform relative" href="lumane1-pago.html">
+<span class="material-symbols-outlined text-[24px]" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="w-full">
+<!-- Editorial Hero -->
+<section class="w-full h-[80vh] md:h-[90vh] relative flex items-center justify-center">
+<div aria-label="Mujer con un mini vestido floral rosa de manga globo, interior de tienda LUMANE, estética minimalista y elegante." class="absolute inset-0 bg-cover bg-center w-full h-full" role="img" style="background-image: url('fotos%20lumane%20rops/WhatsAppImage2025-08-13at5.54.32PM.webp')"></div>
+<div class="absolute inset-0 bg-black/10"></div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-unit">ELEGANCIA COTIDIANA</h1>
+<p class="font-body-md text-body-md text-white/90 mb-gutter-desktop max-w-lg mx-auto">La nueva colección primavera. Piezas versátiles diseñadas para el armario moderno, donde la sofisticación se encuentra con la comodidad absoluta.</p>
+<a class="inline-block bg-white text-black font-label-caps text-label-caps px-8 py-4 uppercase tracking-widest hover:bg-surface-dim transition-colors duration-200" href="lumane1-catalogo.html">Explorar Colección</a>
+</div>
+</section>
+<!-- Shop by Category Strip -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-section-gap-md md:pt-section-gap-lg">
+<div class="flex justify-between items-end mb-gutter-desktop">
+<h2 class="font-headline-md text-headline-md text-primary">Comprar por Categoría</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter-mobile md:gap-gutter-desktop">
+<a class="group cursor-pointer relative overflow-hidden aspect-[3/4] block" href="lumane1-catalogo.html">
+<img alt="Modelo con el Vestido Encaje Negro, top semitransparente de manga larga y falda de encaje, ejemplo de la categoría Vestidos." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="fotos%20lumane%20rops/E62DAC96-6FF5-43B5-8816-B85E295D6BF2.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"></div>
+<span class="absolute bottom-4 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-white tracking-widest">VESTIDOS</span>
+</a>
+<a class="group cursor-pointer relative overflow-hidden aspect-[3/4] block" href="lumane1-catalogo.html">
+<img alt="Modelo con la Camisa Rayada Café, camisa oversize de rayas y short negro, ejemplo de la categoría Ropa." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="fotos%20lumane%20rops/F789B7CD-F65D-4EFB-B03C-7E77F8917DE2.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"></div>
+<span class="absolute bottom-4 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-white tracking-widest">ROPA</span>
+</a>
+<a class="group cursor-pointer relative overflow-hidden aspect-[3/4] block" href="lumane1-catalogo.html">
+<img alt="Modelo con el Conjunto Blazer Rosa, blazer y short en rosa pastel con botones dorados, ejemplo de la categoría Sets." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="fotos%20lumane%20rops/65B7F186-2ABB-439E-9B15-29B369EDF803.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"></div>
+<span class="absolute bottom-4 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-white tracking-widest">SETS</span>
+</a>
+<a class="group cursor-pointer relative overflow-hidden aspect-[3/4] block" href="lumane1-catalogo.html">
+<img alt="Bolsos de piel con tachuelas, negro y gris, exhibidos sobre bases doradas en la tienda LUMANE, ejemplo de la categoría Accesorios." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="fotos%20lumane%20rops/DEEB2F5C-2EA4-4C0E-8F61-DE52DFCE5E72.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"></div>
+<span class="absolute bottom-4 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-white tracking-widest">ACCESORIOS</span>
+</a>
+</div>
+</section>
+<!-- New Arrivals Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap-md md:py-section-gap-lg">
+<div class="flex justify-between items-end mb-gutter-desktop">
+<h2 class="font-headline-md text-headline-md text-primary">Nuevos Ingresos</h2>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hidden md:block" href="lumane1-catalogo.html">VER TODO</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-mobile md:gap-gutter-desktop">
+<!-- Large Feature -->
+<div class="md:col-span-8 group cursor-pointer relative h-[60vh] md:h-[70vh]">
+<img alt="Modelo con camisa oversize de manga corta y short en lino café, botas altas color hueso y bolso tejido, fondo exterior con vegetación." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="fotos%20lumane%20rops/8ABAC1F6-0173-42A7-B942-A010402AC7D7.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-margin-desktop">
+<p class="font-body-lg text-body-lg text-white mb-unit">Conjunto Camisero Café</p>
+<p class="font-price-display text-price-display text-white">$ 2,150.00</p>
+</div>
+</div>
+<!-- Vertical Stack -->
+<div class="md:col-span-4 flex flex-col gap-gutter-mobile md:gap-gutter-desktop">
+<div class="flex-1 group cursor-pointer relative overflow-hidden h-[30vh] md:h-auto">
+<img alt="Dos bolsos de piel con tachuelas, negro y gris, sobre bases doradas en la tienda LUMANE." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="fotos%20lumane%20rops/DEEB2F5C-2EA4-4C0E-8F61-DE52DFCE5E72.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-margin-mobile">
+<p class="font-body-md text-body-md text-white mb-unit">Bolso Tachuelas Piel</p>
+<p class="font-price-display text-price-display text-white">$ 1,950.00</p>
+</div>
+</div>
+<div class="flex-1 group cursor-pointer relative overflow-hidden h-[30vh] md:h-auto bg-surface-container-low flex items-center justify-center p-gutter-desktop">
+<div class="text-center z-10">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Básicos Elevados</h3>
+<p class="font-body-md text-body-md text-secondary mb-4">Descubre los esenciales de la temporada.</p>
+<a class="inline-block border border-primary text-primary font-label-caps text-label-caps px-6 py-2 uppercase tracking-widest hover:bg-primary hover:text-white transition-colors duration-200" href="lumane1-catalogo.html">Comprar Ahora</a>
+</div>
+</div>
+</div>
+</div>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 block mt-gutter-desktop w-max mx-auto md:hidden" href="lumane1-catalogo.html">VER TODO</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-highest w-full mt-section-gap-lg text-primary dark:text-on-surface font-body-md text-body-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop px-margin-desktop py-section-gap-md max-w-container-max mx-auto">
+<!-- Brand & Newsletter -->
+<div class="md:col-span-2 flex flex-col items-start">
+<a class="mb-gutter-desktop" href="lumane1-inicio.html">
+<img alt="LUMANE" class="h-8 w-auto object-contain grayscale opacity-80" src="Lumane_Logotipo-01-convertido-de-webp.png"/>
+</a>
+<p class="text-secondary dark:text-on-surface-variant mb-4 max-w-md">Suscríbete para recibir acceso anticipado a nuevas colecciones y eventos exclusivos.</p>
+<form class="flex w-full max-w-md border-b border-primary pb-2" onsubmit="event.preventDefault();">
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 font-label-caps text-label-caps placeholder:text-secondary dark:placeholder:text-on-surface-variant text-primary dark:text-on-surface" placeholder="TU EMAIL" type="email"/>
+<button class="font-label-caps text-label-caps text-primary hover:opacity-80 transition-opacity uppercase tracking-widest ml-4" type="submit">Unirse</button>
+</form>
+</div>
+<!-- Links 1 -->
+<div class="flex flex-col gap-4 mt-gutter-desktop md:mt-0">
+<p class="font-label-caps text-label-caps text-secondary mb-2">ATENCIÓN AL CLIENTE</p>
+<a class="text-secondary dark:text-on-surface-variant underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">CONTACTO</a>
+<a class="text-secondary dark:text-on-surface-variant underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">ENVÍOS Y DEVOLUCIONES</a>
+</div>
+<!-- Links 2 -->
+<div class="flex flex-col gap-4 mt-gutter-desktop md:mt-0">
+<p class="font-label-caps text-label-caps text-secondary mb-2">LEGAL</p>
+<a class="text-secondary dark:text-on-surface-variant underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">POLÍTICA DE PRIVACIDAD</a>
+<a class="text-secondary dark:text-on-surface-variant underline-offset-4 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#">TÉRMINOS Y CONDICIONES</a>
+</div>
+</div>
+<!-- Copyright -->
+<div class="border-t border-outline-variant/30 dark:border-outline/30 mt-gutter-desktop">
+<div class="max-w-container-max mx-auto px-margin-desktop py-gutter-desktop text-center text-secondary dark:text-on-surface-variant text-sm">
+                © 2024 LUMANE. TODOS LOS DERECHOS RESERVADOS.
+            </div>
+</div>
+</footer>
+</body></html>

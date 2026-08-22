@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMANE — Prototipos de Diseño</title>
+<meta name="description" content="Tres propuestas de diseño para el nuevo sitio de LUMANE. Explora cada prototipo desde el inicio hasta el pago.">
+<link rel="icon" type="image/png" href="icon%20lumane.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&family=Libre+Caslon+Text&family=EB+Garamond:wght@400;500&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f4ef;
+    --paper-alt:#efeae1;
+    --ink:#1a1714;
+    --ink-soft:#6b6660;
+    --line:#ddd6cb;
+    --accent:#8a5a3b;
+    --accent-soft:#f0e4d8;
+    --card-bg:#ffffff;
+    --shadow: 0 1px 2px rgba(26,23,20,0.04), 0 12px 32px -16px rgba(26,23,20,0.18);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+
+  .wrap{
+    width:100%;
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* Header */
+  header.site{
+    padding:28px 0 24px;
+    border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  header.site .logo{
+    height:34px;
+    width:auto;
+    object-fit:contain;
+  }
+  header.site .tag{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    display:none;
+  }
+  @media (min-width:640px){
+    header.site .tag{ display:block; }
+  }
+
+  /* Hero */
+  .hero{
+    padding:76px 0 64px;
+    text-align:center;
+  }
+  .hero .kicker{
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin:0 0 18px;
+  }
+  .hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:clamp(32px, 5.5vw, 56px);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--accent);
+  }
+  .hero p{
+    max-width:620px;
+    margin:0 auto;
+    color:var(--ink-soft);
+    font-size:17px;
+    line-height:1.7;
+  }
+
+  /* Cards grid */
+  .grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:28px;
+    padding-bottom:90px;
+  }
+  @media (min-width:860px){
+    .grid{ grid-template-columns:repeat(3, 1fr); }
+  }
+
+  .card{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:var(--shadow);
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 1px 2px rgba(26,23,20,0.06), 0 24px 48px -18px rgba(26,23,20,0.28);
+  }
+
+  .card .swatch{
+    height:168px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .card .swatch .big-aa{
+    font-size:88px;
+    line-height:1;
+  }
+  .card .swatch .chips{
+    position:absolute;
+    left:20px;
+    bottom:16px;
+    display:flex;
+    gap:8px;
+  }
+  .card .swatch .chip{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    border:1px solid rgba(0,0,0,0.12);
+  }
+  .card .swatch .eyebrow{
+    position:absolute;
+    top:16px;
+    left:20px;
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+
+  .card .body{
+    padding:26px 26px 24px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+  .card h2{
+    font-size:22px;
+    margin:0 0 4px;
+    letter-spacing:-0.01em;
+  }
+  .card .style-name{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .card p.desc{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.65;
+    margin:0 0 22px;
+    flex:1;
+  }
+
+  .card .cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:var(--ink);
+    color:#fff;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-weight:500;
+    padding:13px 18px;
+    border-radius:3px;
+    transition:background .2s ease, gap .2s ease;
+  }
+  .card .cta:hover{
+    background:var(--accent);
+    gap:12px;
+  }
+
+  .card .subnav{
+    display:flex;
+    gap:14px;
+    margin-top:16px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+  }
+  .card .subnav a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+    padding-bottom:2px;
+    border-bottom:1px solid transparent;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .card .subnav a:hover{
+    color:var(--ink);
+    border-color:var(--accent);
+  }
+
+  /* Card 1 — Atelier Monocromático */
+  .card.c1 .swatch{ background:#111111; }
+  .card.c1 .swatch .eyebrow{ color:rgba(255,255,255,0.55); }
+  .card.c1 .swatch .big-aa{ color:#ffffff; font-family:'Libre Caslon Text', serif; }
+  .card.c1 .chip.a{ background:#ffffff; }
+  .card.c1 .chip.b{ background:#9c9c9c; }
+  .card.c1 .chip.c{ background:#111111; border-color:rgba(255,255,255,0.3); }
+
+  /* Card 2 — Editorial Vanguardista */
+  .card.c2 .swatch{ background:#0a0a0a; }
+  .card.c2 .swatch .eyebrow{ color:rgba(255,255,255,0.55); }
+  .card.c2 .swatch .big-aa{ color:#f2f2f2; font-family:'EB Garamond', serif; font-style:italic; }
+  .card.c2 .chip.a{ background:#e60000; }
+  .card.c2 .chip.b{ background:#e2e2e2; }
+  .card.c2 .chip.c{ background:#0a0a0a; border-color:rgba(255,255,255,0.3); }
+
+  /* Card 3 — Minimalismo Luminoso */
+  .card.c3 .swatch{ background:linear-gradient(135deg, #f2ebe1, #e7d8c4); }
+  .card.c3 .swatch .eyebrow{ color:rgba(85,54,27,0.6); }
+  .card.c3 .swatch .big-aa{ color:#55361b; font-family:'Bodoni Moda', serif; }
+  .card.c3 .chip.a{ background:#f9f8f6; }
+  .card.c3 .chip.b{ background:#ecbd99; }
+  .card.c3 .chip.c{ background:#55361b; border-color:rgba(0,0,0,0.1); }
+
+  /* Info strip */
+  .info{
+    padding:0 0 80px;
+  }
+  .info .box{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:28px 30px;
+    background:var(--paper-alt);
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .info .box p{
+    margin:0;
+    font-size:14px;
+    color:var(--ink-soft);
+    max-width:640px;
+  }
+  .info .box strong{
+    color:var(--ink);
+  }
+  .info .devices{
+    display:flex;
+    gap:18px;
+    font-size:12px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+
+  footer.site{
+    border-top:1px solid var(--line);
+    padding:30px 0;
+  }
+  footer.site .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img class="logo" src="Lumane_Logotipo-01-convertido-de-webp.png" alt="LUMANE">
+    <span class="tag">Prototipos de diseño · 2026</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Nuevo sitio LUMANE</p>
+      <h1>Tres formas de imaginar<br><em>tu nueva tienda</em></h1>
+      <p>Antes de construir la página definitiva, preparamos tres direcciones de diseño completas — cada una con su propia personalidad — para que las recorras como lo haría una clienta real: desde el inicio, pasando por el catálogo, hasta el pago. Elige una propuesta para empezar a explorar.</p>
+    </div>
+  </section>
+
+  <section class="grid wrap">
+
+    <article class="card c1">
+      <div class="swatch">
+        <span class="eyebrow">Prototipo 01</span>
+        <span class="big-aa">Aa</span>
+        <div class="chips">
+          <span class="chip a"></span>
+          <span class="chip b"></span>
+          <span class="chip c"></span>
+        </div>
+      </div>
+      <div class="body">
+        <h2>Atelier Monocromático</h2>
+        <p class="style-name">Libre Caslon Text + DM Sans · blanco, negro y gris</p>
+        <p class="desc">Una propuesta clásica y silenciosa: retícula limpia, mucho espacio en blanco y tipografía serif para los títulos. La sensación es de boutique atemporal — lujo discreto, sin ruido visual, enfocado por completo en la prenda.</p>
+        <a class="cta" href="lumane1-inicio.html">Ver prototipo →</a>
+        <nav class="subnav">
+          <a href="lumane1-inicio.html">Inicio</a>
+          <a href="lumane1-catalogo.html">Catálogo</a>
+          <a href="lumane1-producto.html">Producto</a>
+          <a href="lumane1-pago.html">Pago</a>
+        </nav>
+      </div>
+    </article>
+
+    <article class="card c2">
+      <div class="swatch">
+        <span class="eyebrow">Prototipo 02</span>
+        <span class="big-aa">Aa</span>
+        <div class="chips">
+          <span class="chip a"></span>
+          <span class="chip b"></span>
+          <span class="chip c"></span>
+        </div>
+      </div>
+      <div class="body">
+        <h2>Editorial Vanguardista</h2>
+        <p class="style-name">EB Garamond + Hanken Grotesk · negro, crema y rojo</p>
+        <p class="desc">Inspirada en las revistas de alta costura: composiciones asimétricas, fotografía a página completa que cobra color al interactuar y bloques en negro profundo. Una identidad audaz, editorial, con energía de pasarela.</p>
+        <a class="cta" href="lumane2-inicio.html">Ver prototipo →</a>
+        <nav class="subnav">
+          <a href="lumane2-inicio.html">Inicio</a>
+          <a href="lumane2-catalogo.html">Catálogo</a>
+          <a href="lumane2-producto.html">Producto</a>
+          <a href="lumane2-pago.html">Pago</a>
+        </nav>
+      </div>
+    </article>
+
+    <article class="card c3">
+      <div class="swatch">
+        <span class="eyebrow">Prototipo 03</span>
+        <span class="big-aa">Aa</span>
+        <div class="chips">
+          <span class="chip a"></span>
+          <span class="chip b"></span>
+          <span class="chip c"></span>
+        </div>
+      </div>
+      <div class="body">
+        <h2>Minimalismo Luminoso</h2>
+        <p class="style-name">Bodoni Moda + Inter · blanco cálido y terracota</p>
+        <p class="desc">Un enfoque cálido y luminoso: blanco cálido, terracota suave, esquinas redondeadas y fotografía bañada en luz natural. La sensación es femenina, cercana y de lujo accesible.</p>
+        <a class="cta" href="lumane3-inicio.html">Ver prototipo →</a>
+        <nav class="subnav">
+          <a href="lumane3-inicio.html">Inicio</a>
+          <a href="lumane3-catalogo.html">Catálogo</a>
+          <a href="lumane3-producto.html">Producto</a>
+          <a href="lumane3-pago.html">Pago</a>
+        </nav>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="info wrap">
+    <div class="box">
+      <p><strong>Nota:</strong> estos prototipos muestran únicamente el diseño visual — sin backend, carrito ni pagos reales. Cada uno mantiene su propia línea de diseño de principio a fin.</p>
+      <div class="devices">Teléfono · Tablet · Computadora</div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 LUMANE. Documento interno de revisión de diseño.</span>
+    <span>Elaborado para revisión del sitio lumanemx.com</span>
+  </div>
+</footer>
+
+</body>
+</html>

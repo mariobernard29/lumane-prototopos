@@ -1,0 +1,355 @@
+<!-- Pago - Lumane (Luminous Minimal) -->
+<!DOCTYPE html>
+<html class="light" lang="es-MX"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUMANE - Pago</title>
+<link rel="icon" type="image/png" href="icon%20lumane.png">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "secondary-container": "#e0dfde",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c7c6c5",
+                        "tertiary-fixed": "#ede1d1",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#ffdcc2",
+                        "error-container": "#ffdad6",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#ecbd99",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#433c31",
+                        "error": "#ba1a1a",
+                        "primary-container": "#6f4d30",
+                        "outline": "#82756b",
+                        "on-primary-fixed-variant": "#604024",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#2e1501",
+                        "secondary-fixed": "#e3e2e0",
+                        "warm-white": "#F9F8F6",
+                        "surface-variant": "#e2e2e2",
+                        "pure-white": "#FFFFFF",
+                        "on-tertiary-fixed": "#211b11",
+                        "surface-tint": "#7a5739",
+                        "tertiary-container": "#5b5347",
+                        "on-surface-variant": "#50453d",
+                        "on-secondary-container": "#626361",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#464746",
+                        "on-primary-container": "#efc09b",
+                        "secondary": "#5e5e5d",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "primary": "#55361b",
+                        "on-tertiary-container": "#d3c7b7",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed-dim": "#d0c5b5",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-fixed": "#1a1c1b",
+                        "outline-variant": "#d4c3b9",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4d463a",
+                        "charcoal-accent": "#2D2D2D",
+                        "primary-fixed-dim": "#ecbd99",
+                        "surface-container-low": "#f4f3f3",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom Input Styles */
+        .lumane-input {
+            border: none;
+            border-bottom: 1px solid #d4c3b9; /* outline-variant */
+            background-color: transparent;
+            padding: 8px 0;
+            border-radius: 0;
+            transition: border-color 0.3s ease;
+            box-shadow: none !important;
+        }
+        .lumane-input:focus {
+            border-bottom: 1px solid #2D2D2D; /* charcoal-accent */
+            outline: none;
+        }
+
+        .lumane-radio {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #d4c3b9;
+            border-radius: 50%;
+            outline: none;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lumane-radio:checked {
+            border-color: #2D2D2D;
+        }
+        .lumane-radio:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: #2D2D2D;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-warm-white text-on-background min-h-screen font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed flex flex-col">
+<!-- Simplified Header -->
+<header class="w-full bg-warm-white/90 backdrop-blur-md py-8 px-margin-mobile md:px-margin-desktop sticky top-0 z-50">
+<div class="max-w-container-max mx-auto text-right mb-3">
+<a class="font-label-sm text-label-sm text-outline hover:text-primary uppercase tracking-widest transition-colors duration-300" href="index.html">← Volver al índice</a>
+</div>
+<div class="max-w-container-max mx-auto flex items-center justify-between">
+<a class="font-label-md text-label-md text-secondary hover:text-charcoal-accent transition-colors flex items-center gap-2" href="lumane3-catalogo.html">
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_back">arrow_back</span>
+<span class="uppercase tracking-widest hidden md:inline">Volver al Carrito</span>
+</a>
+<a class="flex-shrink-0" href="lumane3-inicio.html">
+<img alt="LUMANE" class="h-8 md:h-[54px] w-auto object-contain" src="Lumane_Logotipo-01-convertido-de-webp.png"/>
+</a>
+<!-- Spacer for centering (mirrors the back-link's rendered width at each breakpoint) -->
+<div aria-hidden="true" class="w-4 md:w-[150px]"></div>
+</div>
+</header>
+<!-- Main Checkout Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-[80px]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-[64px] lg:gap-gutter items-start">
+<!-- Left Column: Forms -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-[80px]">
+<!-- Contact Info -->
+<section>
+<h2 class="font-headline-md text-headline-md mb-8">Contacto</h2>
+<form class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="email">Correo Electrónico</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent placeholder-secondary-fixed-dim" id="email" placeholder="tu@email.com" required="" type="email"/>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-charcoal-accent focus:ring-charcoal-accent" id="newsletter" type="checkbox"/>
+<label class="font-body-md text-body-md text-secondary" for="newsletter">Enviarme novedades y ofertas exclusivas</label>
+</div>
+</form>
+</section>
+<!-- Shipping Address -->
+<section>
+<h2 class="font-headline-md text-headline-md mb-8">Dirección de Envío</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-8">
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="country">País / Región</label>
+<select class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent bg-transparent appearance-none" id="country">
+<option selected="" value="mx">México</option>
+<option value="es">España</option>
+<option value="ar">Argentina</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="firstName">Nombre</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="firstName" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="lastName">Apellidos</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="lastName" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="address">Dirección</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="address" placeholder="Calle, número, piso..." required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="apartment">Apartamento, local, etc. (opcional)</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="apartment" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="postalCode">Código Postal</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="postalCode" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="city">Ciudad</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="city" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="phone">Teléfono</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="phone" required="" type="tel"/>
+</div>
+</form>
+</section>
+<!-- Payment Method -->
+<section>
+<h2 class="font-headline-md text-headline-md mb-8">Pago</h2>
+<p class="font-body-md text-body-md text-secondary mb-6">Todas las transacciones son seguras y están encriptadas.</p>
+<div class="border border-outline-variant rounded-lg overflow-hidden flex flex-col bg-pure-white">
+<!-- Credit Card Radio -->
+<div class="p-6 border-b border-outline-variant flex items-center justify-between cursor-pointer" onclick="document.getElementById('radio-cc').click()">
+<div class="flex items-center gap-4">
+<input checked="" class="lumane-radio" id="radio-cc" name="payment" type="radio"/>
+<label class="font-label-md text-label-md uppercase tracking-widest cursor-pointer" for="radio-cc">Tarjeta de Crédito</label>
+</div>
+<div class="flex gap-2 text-secondary">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+</div>
+</div>
+<!-- Credit Card Form (Visible when checked) -->
+<div class="p-6 bg-surface-bright grid grid-cols-2 gap-x-gutter gap-y-6">
+<div class="flex flex-col gap-2 col-span-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="cc-num">Número de Tarjeta</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="cc-num" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="cc-exp">Fecha de Expiración (MM/AA)</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="cc-exp" placeholder="MM/AA" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="cc-cvv">Código de Seguridad (CVV)</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="cc-cvv" placeholder="123" type="text"/>
+</div>
+<div class="flex flex-col gap-2 col-span-2">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest" for="cc-name">Nombre en la Tarjeta</label>
+<input class="lumane-input w-full font-body-lg text-body-lg text-charcoal-accent" id="cc-name" type="text"/>
+</div>
+</div>
+<!-- PayPal Radio -->
+<div class="p-6 flex items-center justify-between cursor-pointer" onclick="document.getElementById('radio-paypal').click()">
+<div class="flex items-center gap-4">
+<input class="lumane-radio" id="radio-paypal" name="payment" type="radio"/>
+<label class="font-label-md text-label-md uppercase tracking-widest cursor-pointer" for="radio-paypal">PayPal</label>
+</div>
+<span class="font-label-md text-label-md text-secondary">Paypal</span>
+</div>
+</div>
+<button class="mt-[48px] w-full bg-charcoal-accent text-on-primary font-label-md text-label-md uppercase tracking-widest py-5 px-8 hover:bg-black transition-colors duration-300">
+                        Pagar Ahora
+                    </button>
+</section>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="lg:col-span-5 xl:col-span-4 lg:sticky lg:top-[120px]">
+<div class="bg-pure-white p-8 border border-outline-variant/30 rounded-none shadow-[0_10px_40px_rgba(45,45,45,0.02)]">
+<h3 class="font-headline-md text-headline-md mb-8">Resumen del Pedido</h3>
+<!-- Products List -->
+<div class="flex flex-col gap-6 mb-8 border-b border-outline-variant/30 pb-8">
+<!-- Item 1 -->
+<div class="flex items-center gap-4">
+<div class="w-20 h-24 bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" alt="Vestido Encaje Negro sobre modelo, top semitransparente y falda de encaje" src="fotos%20lumane%20rops/E62DAC96-6FF5-43B5-8816-B85E295D6BF2.webp"/>
+<div class="absolute -top-2 -right-2 w-6 h-6 bg-charcoal-accent text-pure-white rounded-full flex items-center justify-center font-label-sm text-[10px]">1</div>
+</div>
+<div class="flex-grow flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-widest">Vestido Encaje Negro</span>
+<span class="font-body-md text-body-md text-secondary mt-1">Talla: S | Color: Negro</span>
+<span class="font-body-lg text-body-lg mt-2">$2,890.00</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4">
+<div class="w-20 h-24 bg-surface-container-high flex-shrink-0 relative">
+<img class="w-full h-full object-cover" alt="Conjunto Estampado Geométrico, camisa y pantalón ancho en negro con líneas blancas" src="fotos%20lumane%20rops/6DF08EAA-88F5-4A39-A78E-66BCAA665F8E.webp"/>
+<div class="absolute -top-2 -right-2 w-6 h-6 bg-charcoal-accent text-pure-white rounded-full flex items-center justify-center font-label-sm text-[10px]">1</div>
+</div>
+<div class="flex-grow flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-widest">Conjunto Estampado Geométrico</span>
+<span class="font-body-md text-body-md text-secondary mt-1">Talla: M | Color: Negro</span>
+<span class="font-body-lg text-body-lg mt-2">$2,650.00</span>
+</div>
+</div>
+</div>
+<!-- Discount Code -->
+<div class="flex gap-4 mb-8 pb-8 border-b border-outline-variant/30">
+<input class="lumane-input flex-grow min-w-0 font-body-md text-body-md placeholder-secondary" placeholder="Código de descuento" type="text"/>
+<button class="border border-charcoal-accent px-6 py-2 font-label-md text-label-md uppercase tracking-widest hover:bg-charcoal-accent hover:text-pure-white transition-colors duration-300">Aplicar</button>
+</div>
+<!-- Totals -->
+<div class="flex flex-col gap-4">
+<div class="flex justify-between items-center font-body-md text-body-md text-secondary">
+<span>Subtotal</span>
+<span>$5,540.00</span>
+</div>
+<div class="flex justify-between items-center font-body-md text-body-md text-secondary">
+<span>Envío</span>
+<span class="text-charcoal-accent">Gratis</span>
+</div>
+<div class="flex justify-between items-center font-headline-md text-headline-md mt-4 pt-4 border-t border-outline-variant/30">
+<span>Total</span>
+<span>$5,540.00</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary text-right mt-1">IVA incluido</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant/30 grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-[80px] max-w-container-max mx-auto w-full mt-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-primary">LUMANE</span>
+<p class="font-body-md text-body-md text-secondary">© 2026 LUMANE. Todos los derechos reservados.</p>
+</div>
+<div class="flex flex-col gap-4 md:col-span-2">
+<nav class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-body-md text-body-md text-secondary hover:text-primary underline-offset-4 hover:underline transition-all duration-200" href="#">Contacto</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary underline-offset-4 hover:underline transition-all duration-200" href="#">Envíos y Devoluciones</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary underline-offset-4 hover:underline transition-all duration-200" href="#">Política de Privacidad</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary underline-offset-4 hover:underline transition-all duration-200" href="#">Términos</a>
+</nav>
+</div>
+</footer>
+</body></html>

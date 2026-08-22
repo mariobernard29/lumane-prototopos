@@ -196,13 +196,56 @@
                 z-index: 10;
             }
             .input-minimal {
-                @apply w-full bg-transparent border-0 border-b border-primary-fixed-variant focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-primary focus:border-b-2 transition-all;
+                display: block;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #e2e2e2;
+                border-radius: 0;
+                padding: 8px 0;
+                font-family: 'Hanken Grotesk', sans-serif;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                color: #000000;
+                outline: none;
+                box-shadow: none;
+                transition: border-color 150ms ease, border-width 150ms ease;
+            }
+            .input-minimal:focus {
+                border-bottom: 2px solid #000000;
             }
             .label-minimal {
-                @apply block font-label-upper text-label-upper text-secondary uppercase mb-1;
+                display: block;
+                font-family: 'Hanken Grotesk', sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0.15em;
+                font-weight: 700;
+                color: #5d5f5f;
+                text-transform: uppercase;
+                margin-bottom: 4px;
             }
             .btn-primary {
-                @apply bg-primary text-on-primary font-label-upper text-label-upper uppercase py-6 px-12 transition-all duration-100 ease-in-out hover:bg-on-primary hover:text-primary border border-primary;
+                display: inline-block;
+                background-color: #000000;
+                color: #ffffff;
+                font-family: 'Hanken Grotesk', sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 0.15em;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 24px 48px;
+                border: 1px solid #000000;
+                border-radius: 0;
+                cursor: pointer;
+                transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+            }
+            .btn-primary:hover {
+                background-color: #ffffff;
+                color: #000000;
             }
         </style>
     </head>

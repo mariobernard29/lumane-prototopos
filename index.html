@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="icon%20lumane.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Caslon+Text&family=EB+Garamond:wght@400;500&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Caslon+Text&family=EB+Garamond:wght@400;500&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Cormorant+Garamond:wght@500&family=Manrope:wght@500&family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#f7f4ef;
@@ -223,6 +223,46 @@
   .card.c3 .chip.b{ background:#ecbd99; }
   .card.c3 .chip.c{ background:#55361b; border-color:rgba(0,0,0,0.1); }
 
+  /* Evolución del Prototipo 02 */
+  .evo{
+    padding:20px 0 8px;
+  }
+  .evo-head{
+    max-width:720px;
+    margin:0 auto 40px;
+    text-align:center;
+  }
+  .evo-head .kicker{
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin:0 0 14px;
+  }
+  .evo-head h2{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:clamp(26px, 4vw, 36px);
+    letter-spacing:-0.01em;
+    margin:0 0 16px;
+  }
+  .evo-head p{
+    color:var(--ink-soft);
+    font-size:15px;
+    line-height:1.7;
+    margin:0;
+  }
+
+  .card.v2 .swatch{ background:#0a0a0a; }
+  .card.v2 .swatch .chips{ left:auto; right:20px; }
+  .card.v2 .chip.a{ background:#e60000; }
+  .card.v2 .chip.b{ background:#e2e2e2; }
+  .card.v2 .chip.c{ background:#0a0a0a; border-color:rgba(255,255,255,0.3); }
+  .card.va .swatch .big-aa{ color:#f2f2f2; font-family:'Libre Caslon Text', serif; }
+  .card.vb .swatch .big-aa{ color:#f2f2f2; font-family:'Cormorant Garamond', serif; }
+  .card.vc .swatch .big-aa{ color:#f2f2f2; font-family:'Fraunces', serif; }
+
   /* Info strip */
   .info{
     padding:0 0 80px;
@@ -353,6 +393,87 @@
       </div>
     </article>
 
+  </section>
+
+  <section class="evo wrap">
+    <div class="evo-head">
+      <p class="kicker">Nueva iteración · a partir de tus comentarios</p>
+      <h2>Prototipo 02, evolucionado</h2>
+      <p>Conserva la identidad visual que más te gustó del Prototipo 02 — fondo negro y fotografía que cobra color y muestra el precio al interactuar — y suma lo más funcional del Prototipo 01: navegación siempre visible, categorías con filtros claros y varias secciones nuevas. Las tres versiones de abajo son exactamente iguales; solo cambia la tipografía, para que elijas la que más te guste.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card v2 va">
+        <div class="swatch">
+          <span class="big-aa">Aa</span>
+          <div class="chips">
+            <span class="chip a"></span>
+            <span class="chip b"></span>
+            <span class="chip c"></span>
+          </div>
+        </div>
+        <div class="body">
+          <h2>Variante A</h2>
+          <p class="style-name">Libre Caslon Text + DM Sans</p>
+          <p class="desc">La misma tipografía que ya te gustó del Prototipo 01: un serif clásico y atemporal, con un sans limpio para el texto. Segura, elegante, de toda la vida.</p>
+          <a class="cta" href="lumane2a-inicio.html">Ver variante A →</a>
+          <nav class="subnav">
+            <a href="lumane2a-inicio.html">Inicio</a>
+            <a href="lumane2a-catalogo.html">Catálogo</a>
+            <a href="lumane2a-producto.html">Producto</a>
+            <a href="lumane2a-pago.html">Pago</a>
+          </nav>
+        </div>
+      </article>
+
+      <article class="card v2 vb">
+        <div class="swatch">
+          <span class="big-aa">Aa</span>
+          <div class="chips">
+            <span class="chip a"></span>
+            <span class="chip b"></span>
+            <span class="chip c"></span>
+          </div>
+        </div>
+        <div class="body">
+          <h2>Variante B</h2>
+          <p class="style-name">Cormorant Garamond + Manrope</p>
+          <p class="desc">Un serif más delicado y romántico, de revista de moda de alta costura, combinado con un sans geométrico muy limpio. Más editorial, más femenino.</p>
+          <a class="cta" href="lumane2b-inicio.html">Ver variante B →</a>
+          <nav class="subnav">
+            <a href="lumane2b-inicio.html">Inicio</a>
+            <a href="lumane2b-catalogo.html">Catálogo</a>
+            <a href="lumane2b-producto.html">Producto</a>
+            <a href="lumane2b-pago.html">Pago</a>
+          </nav>
+        </div>
+      </article>
+
+      <article class="card v2 vc">
+        <div class="swatch">
+          <span class="big-aa">Aa</span>
+          <div class="chips">
+            <span class="chip a"></span>
+            <span class="chip b"></span>
+            <span class="chip c"></span>
+          </div>
+        </div>
+        <div class="body">
+          <h2>Variante C</h2>
+          <p class="style-name">Fraunces + Inter</p>
+          <p class="desc">Un serif moderno con carácter propio, sobre un sans neutro y muy pulido. La opción más limpia y diferente de las tres.</p>
+          <a class="cta" href="lumane2c-inicio.html">Ver variante C →</a>
+          <nav class="subnav">
+            <a href="lumane2c-inicio.html">Inicio</a>
+            <a href="lumane2c-catalogo.html">Catálogo</a>
+            <a href="lumane2c-producto.html">Producto</a>
+            <a href="lumane2c-pago.html">Pago</a>
+          </nav>
+        </div>
+      </article>
+
+    </div>
   </section>
 
   <section class="info wrap">

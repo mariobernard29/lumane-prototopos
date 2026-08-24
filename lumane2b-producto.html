@@ -34,7 +34,7 @@
           "outline-variant": "#CFC4C5",
           "on-primary-container": "#848484",
           "on-primary-fixed-variant": "#474747",
-          "accent-red": "#E60000"
+          "accent-red": "#000000"
         },
         borderRadius: { "DEFAULT": "0", "lg": "0", "xl": "0", "full": "9999px" },
         spacing: {
@@ -98,7 +98,7 @@
   .nav-item { position:relative; }
   .nav-item::after {
     content:""; position:absolute; left:0; right:0; bottom:-7px; height:1px;
-    background:#E60000; transform:scaleX(0); transform-origin:left;
+    background:#000000; transform:scaleX(0); transform-origin:left;
     transition:transform .3s cubic-bezier(.2,.7,.2,1);
   }
   .nav-item:hover::after, .nav-item[aria-current="page"]::after { transform:scaleX(1); }
@@ -114,8 +114,8 @@
     position:absolute; left:0; right:0; bottom:0;
     background:rgba(10,10,10,.92); color:#fff; backdrop-filter:blur(6px);
   }
-  .p-rule { position:absolute; top:0; left:0; right:0; height:2px; background:#E60000; transform-origin:left; }
-  .p-card:focus-visible { outline:2px solid #E60000; outline-offset:4px; }
+  .p-rule { position:absolute; top:0; left:0; right:0; height:2px; background:#ffffff; transform-origin:left; }
+  .p-card:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
   @media (hover:none) {
     .p-media { filter:none; }
@@ -455,15 +455,15 @@
 <section class="bg-editorial-ink text-on-tertiary border-t border-on-primary-fixed-variant" aria-labelledby="t-boletin">
   <div class="px-5 sm:px-margin-edge py-section-v-md grid grid-cols-1 lg:grid-cols-12 gap-col-gap items-end">
     <div class="lg:col-span-6">
-      <p class="font-label-upper text-label-upper uppercase text-accent-red mb-3">Boletín</p>
+      <p class="font-label-upper text-label-upper uppercase text-white mb-3">Boletín</p>
       <h2 id="t-boletin" class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Antes que nadie.</h2>
       <p class="font-body-md text-body-md text-white/65 max-w-lg">Acceso anticipado a cada colección, invitaciones a nuestros eventos privados y una selección editorial al mes. Nada más.</p>
     </div>
     <form class="lg:col-span-6 lg:col-start-7 mt-8 lg:mt-0" onsubmit="event.preventDefault();">
-      <div class="flex items-center border-b border-on-primary-fixed-variant focus-within:border-accent-red transition-colors pb-3">
+      <div class="flex items-center border-b border-on-primary-fixed-variant focus-within:border-white transition-colors pb-3">
         <label class="sr-only" for="boletin-email">Correo electrónico</label>
         <input class="flex-grow bg-transparent border-none focus:ring-0 p-0 font-body-md text-body-md text-white placeholder:text-white/40" id="boletin-email" placeholder="tu@correo.com" required type="email">
-        <button class="font-label-upper text-label-upper uppercase text-white hover:text-accent-red transition-colors whitespace-nowrap ml-4" type="submit">Suscribirme</button>
+        <button class="font-label-upper text-label-upper uppercase text-white hover:text-white/60 transition-colors whitespace-nowrap ml-4" type="submit">Suscribirme</button>
       </div>
       <p class="font-body-md text-[13px] text-white/40 mt-4">Al suscribirte aceptas recibir correos de LUMANE. Puedes darte de baja cuando quieras.</p>
     </form>
@@ -475,11 +475,11 @@
   <div class="px-5 sm:px-margin-edge py-section-v-md grid grid-cols-2 lg:grid-cols-12 gap-x-col-gap gap-y-12">
     <div class="col-span-2 lg:col-span-4">
       <a class="inline-block mb-6" href="lumane2b-inicio.html"><img alt="LUMANE" class="h-8 w-auto object-contain brightness-0 invert" src="Lumane_Logotipo-01-convertido-de-webp.png"></a>
-      <p class="font-body-md text-body-md text-white/60 max-w-xs mb-6">Boutique de moda femenina. Piezas de autor producidas en México, en series cortas.</p>
+      <p class="font-body-md text-body-md text-white/60 max-w-xs mb-6">Boutique de moda femenina. Piezas de autor, en series cortas.</p>
       <div class="flex gap-5 text-white/60">
-        <a aria-label="Instagram de LUMANE" class="hover:text-accent-red transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
-        <a aria-label="Facebook de LUMANE" class="hover:text-accent-red transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">thumb_up</span></a>
-        <a aria-label="WhatsApp de LUMANE" class="hover:text-accent-red transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a>
+        <a aria-label="Instagram de LUMANE" class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+        <a aria-label="Facebook de LUMANE" class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">thumb_up</span></a>
+        <a aria-label="WhatsApp de LUMANE" class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a>
       </div>
     </div>
     <div class="col-span-1 lg:col-span-2">

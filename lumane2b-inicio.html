@@ -34,7 +34,7 @@
           "outline-variant": "#CFC4C5",
           "on-primary-container": "#848484",
           "on-primary-fixed-variant": "#474747",
-          "accent-red": "#E60000"
+          "accent-red": "#000000"
         },
         borderRadius: { "DEFAULT": "0", "lg": "0", "xl": "0", "full": "9999px" },
         spacing: {
@@ -96,11 +96,11 @@
     background-repeat:repeat; opacity:.035; pointer-events:none;
   }
 
-  /* Navegación principal — subrayado rojo */
+  /* Navegación principal — subrayado */
   .nav-item { position:relative; }
   .nav-item::after {
     content:""; position:absolute; left:0; right:0; bottom:-7px; height:1px;
-    background:#E60000; transform:scaleX(0); transform-origin:left;
+    background:#000000; transform:scaleX(0); transform-origin:left;
     transition:transform .3s cubic-bezier(.2,.7,.2,1);
   }
   .nav-item:hover::after, .nav-item[aria-current="page"]::after { transform:scaleX(1); }
@@ -119,10 +119,10 @@
     background:rgba(10,10,10,.92); color:#fff; backdrop-filter:blur(6px);
   }
   .p-rule {
-    position:absolute; top:0; left:0; right:0; height:2px; background:#E60000;
+    position:absolute; top:0; left:0; right:0; height:2px; background:#ffffff;
     transform-origin:left;
   }
-  .p-card:focus-visible { outline:2px solid #E60000; outline-offset:4px; }
+  .p-card:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
   /* Dispositivos táctiles: sin cursor no hay hover.
      El nombre y el precio se muestran siempre, y el color entra
@@ -151,7 +151,7 @@
   .tile-media { filter:grayscale(1); transition:filter .6s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
   .tile:hover .tile-media, .tile:focus-visible .tile-media { filter:none; transform:scale(1.06); }
   @media (hover:none) { .tile-media { filter:none; } }
-  .tile:focus-visible { outline:2px solid #E60000; outline-offset:4px; }
+  .tile:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
   /* Portada: la fotografía entra en blanco y negro y toma color */
   .hero-media { filter:grayscale(1); transform:scale(1.06); animation:heroReveal 1.9s cubic-bezier(.2,.7,.2,1) .2s forwards; }
@@ -217,10 +217,10 @@
   <!-- ===================== FRANJA DE SERVICIOS ===================== -->
   <section aria-label="Servicios LUMANE" class="bg-editorial-ink text-on-tertiary">
     <ul class="px-5 sm:px-margin-edge py-5 grid grid-cols-2 lg:grid-cols-4 gap-y-4 gap-x-6 text-center lg:text-left">
-      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-accent-red text-[20px]">local_shipping</span><span class="font-label-upper text-label-upper uppercase">Envío express sin costo desde $10,000</span></li>
-      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-accent-red text-[20px]">credit_card</span><span class="font-label-upper text-label-upper uppercase">Meses sin intereses</span></li>
-      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-accent-red text-[20px]">autorenew</span><span class="font-label-upper text-label-upper uppercase">Cambios y devoluciones en 14 días</span></li>
-      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-accent-red text-[20px]">chat</span><span class="font-label-upper text-label-upper uppercase">Asesoría por WhatsApp</span></li>
+      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-white text-[20px]">local_shipping</span><span class="font-label-upper text-label-upper uppercase">Envío express sin costo desde $10,000</span></li>
+      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-white text-[20px]">credit_card</span><span class="font-label-upper text-label-upper uppercase">Meses sin intereses</span></li>
+      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-white text-[20px]">autorenew</span><span class="font-label-upper text-label-upper uppercase">Cambios y devoluciones en 14 días</span></li>
+      <li class="flex items-center gap-3 justify-center lg:justify-start"><span class="material-symbols-outlined text-white text-[20px]">chat</span><span class="font-label-upper text-label-upper uppercase">Asesoría por WhatsApp</span></li>
     </ul>
   </section>
 
@@ -353,29 +353,29 @@
         <span class="absolute top-4 right-4 bg-editorial-ink border border-on-tertiary px-3 py-1.5 font-label-upper text-[10px] uppercase">Edición limitada</span>
       </div>
       <div class="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 mb-10 lg:mb-0">
-        <p class="font-label-upper text-label-upper uppercase text-accent-red mb-3">03 / Nuestra casa</p>
+        <p class="font-label-upper text-label-upper uppercase text-white mb-3">03 / Nuestra casa</p>
         <h2 id="t-historia" class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-7 leading-tight">
           Hecho para durar<br>más de una temporada.
         </h2>
         <div class="space-y-5 max-w-xl font-body-md text-body-md text-white/70">
-          <p>LUMANE nació de una idea sencilla: que una mujer pueda vestirse bien sin pensarlo demasiado. Trabajamos con talleres mexicanos pequeños, en series cortas, para cuidar cada costura y cada caída de tela.</p>
+          <p>LUMANE nació de una idea sencilla: que una mujer pueda vestirse bien sin pensarlo demasiado. Elegimos cada pieza con cuidado, en series cortas, para que cada compra se sienta especial.</p>
           <p>Cada temporada partimos de la misma pregunta —¿esta pieza seguirá sirviendo dentro de tres años?— y sólo producimos lo que responde que sí. Menos prendas, mejor hechas.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 pt-8 border-t border-on-primary-fixed-variant">
           <div>
-            <p class="font-headline-md text-headline-md text-accent-red mb-2">01</p>
-            <h3 class="font-headline-sm text-headline-sm mb-2">Sastrería propia</h3>
-            <p class="font-body-md text-[14px] text-white/60">Patrones desarrollados en casa y ajustados sobre modelo real.</p>
+            <p class="font-headline-md text-headline-md text-white mb-2">01</p>
+            <h3 class="font-headline-sm text-headline-sm mb-2">Curaduría cuidadosa</h3>
+            <p class="font-body-md text-[14px] text-white/60">Cada pieza pasa por nuestras manos antes de llegar a la tienda: la probamos y la elegimos.</p>
           </div>
           <div>
-            <p class="font-headline-md text-headline-md text-accent-red mb-2">02</p>
+            <p class="font-headline-md text-headline-md text-white mb-2">02</p>
             <h3 class="font-headline-sm text-headline-sm mb-2">Tejidos de origen</h3>
             <p class="font-body-md text-[14px] text-white/60">Algodones, linos y puntos elegidos por su caída y su resistencia.</p>
           </div>
           <div>
-            <p class="font-headline-md text-headline-md text-accent-red mb-2">03</p>
-            <h3 class="font-headline-sm text-headline-sm mb-2">Hecho en México</h3>
-            <p class="font-body-md text-[14px] text-white/60">Producción local en series cortas, con talleres que conocemos por nombre.</p>
+            <p class="font-headline-md text-headline-md text-white mb-2">03</p>
+            <h3 class="font-headline-sm text-headline-sm mb-2">Series limitadas</h3>
+            <p class="font-body-md text-[14px] text-white/60">Cantidades pequeñas, para que no te encuentres tu look repetido en cada esquina.</p>
           </div>
         </div>
       </div>
@@ -461,15 +461,15 @@
 <section class="bg-editorial-ink text-on-tertiary border-t border-on-primary-fixed-variant" aria-labelledby="t-boletin">
   <div class="px-5 sm:px-margin-edge py-section-v-md grid grid-cols-1 lg:grid-cols-12 gap-col-gap items-end">
     <div class="lg:col-span-6">
-      <p class="font-label-upper text-label-upper uppercase text-accent-red mb-3">Boletín</p>
+      <p class="font-label-upper text-label-upper uppercase text-white mb-3">Boletín</p>
       <h2 id="t-boletin" class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Antes que nadie.</h2>
       <p class="font-body-md text-body-md text-white/65 max-w-lg">Acceso anticipado a cada colección, invitaciones a nuestros eventos privados y una selección editorial al mes. Nada más.</p>
     </div>
     <form class="lg:col-span-6 lg:col-start-7 mt-8 lg:mt-0" onsubmit="event.preventDefault();">
-      <div class="flex items-center border-b border-on-primary-fixed-variant focus-within:border-accent-red transition-colors pb-3">
+      <div class="flex items-center border-b border-on-primary-fixed-variant focus-within:border-white transition-colors pb-3">
         <label class="sr-only" for="boletin-email">Correo electrónico</label>
         <input class="flex-grow bg-transparent border-none focus:ring-0 p-0 font-body-md text-body-md text-white placeholder:text-white/40" id="boletin-email" placeholder="tu@correo.com" required type="email">
-        <button class="font-label-upper text-label-upper uppercase text-white hover:text-accent-red transition-colors whitespace-nowrap ml-4" type="submit">Suscribirme</button>
+        <button class="font-label-upper text-label-upper uppercase text-white hover:text-white/60 transition-colors whitespace-nowrap ml-4" type="submit">Suscribirme</button>
       </div>
       <p class="font-body-md text-[13px] text-white/40 mt-4">Al suscribirte aceptas recibir correos de LUMANE. Puedes darte de baja cuando quieras.</p>
     </form>
@@ -481,11 +481,11 @@
   <div class="px-5 sm:px-margin-edge py-section-v-md grid grid-cols-2 lg:grid-cols-12 gap-x-col-gap gap-y-12">
     <div class="col-span-2 lg:col-span-4">
       <a class="inline-block mb-6" href="lumane2b-inicio.html"><img alt="LUMANE" class="h-8 w-auto object-contain brightness-0 invert" src="Lumane_Logotipo-01-convertido-de-webp.png"></a>
-      <p class="font-body-md text-body-md text-white/60 max-w-xs mb-6">Boutique de moda femenina. Piezas de autor producidas en México, en series cortas.</p>
+      <p class="font-body-md text-body-md text-white/60 max-w-xs mb-6">Boutique de moda femenina. Piezas de autor, en series cortas.</p>
       <div class="flex gap-5 text-white/60">
-        <a aria-label="Instagram de LUMANE" class="hover:text-accent-red transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
-        <a aria-label="Facebook de LUMANE" class="hover:text-accent-red transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">thumb_up</span></a>
-        <a aria-label="WhatsApp de LUMANE" class="hover:text-accent-red transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a>
+        <a aria-label="Instagram de LUMANE" class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+        <a aria-label="Facebook de LUMANE" class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">thumb_up</span></a>
+        <a aria-label="WhatsApp de LUMANE" class="hover:text-white transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a>
       </div>
     </div>
     <div class="col-span-1 lg:col-span-2">

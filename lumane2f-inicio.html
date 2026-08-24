@@ -125,12 +125,12 @@
   .p-card:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
   /* Dispositivos táctiles: sin cursor no hay hover.
-     El nombre y el precio se muestran siempre, y el color entra
-     cuando la tarjeta aparece en pantalla. */
+     El nombre y el precio se muestran siempre, y la fotografía
+     toma color al presionar la tarjeta. */
   @media (hover:none) {
     .p-media { filter:none; }
     html.js .p-media { filter:grayscale(1) contrast(1.04); }
-    html.js .p-card.in-view .p-media { filter:none; }
+    html.js .p-card.is-pressed .p-media { filter:none; }
     .p-caption { opacity:1; transform:none; }
     .p-rule { transform:scaleX(1); }
   }
@@ -148,16 +148,15 @@
   }
 
   /* Mosaicos de categoría y galería */
-  .tile-media { filter:grayscale(1); transition:filter .6s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
-  .tile:hover .tile-media, .tile:focus-visible .tile-media { filter:none; transform:scale(1.06); }
-  @media (hover:none) { .tile-media { filter:none; } }
+  .tile-media { transition:transform .8s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .tile-media, .tile:focus-visible .tile-media { transform:scale(1.06); }
   .tile:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
-  /* Portada: la fotografía entra en blanco y negro y toma color */
-  .hero-media { filter:grayscale(1); transform:scale(1.06); animation:heroReveal 1.9s cubic-bezier(.2,.7,.2,1) .2s forwards; }
-  @keyframes heroReveal { to { filter:grayscale(0); transform:scale(1); } }
+  /* Portada: la fotografía entra a color con un ligero acercamiento */
+  .hero-media { transform:scale(1.06); animation:heroReveal 1.9s cubic-bezier(.2,.7,.2,1) .2s forwards; }
+  @keyframes heroReveal { to { transform:scale(1); } }
   @media (prefers-reduced-motion:reduce) {
-    .hero-media { animation:none; filter:none; transform:none; }
+    .hero-media { animation:none; transform:none; }
     .p-media, .tile-media, .p-caption { transition:none; }
   }
 </style>
@@ -184,10 +183,15 @@
   </div>
   <nav aria-label="Categorías" class="border-t border-surface-variant">
     <div class="flex items-center justify-start md:justify-center gap-7 md:gap-10 h-11 px-5 sm:px-margin-edge overflow-x-auto no-scrollbar">
-      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Ropa</a>
       <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Vestidos</a>
       <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Sets</a>
-      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Accesorios</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Pantalones</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Suéters / cardigans</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Abrigos</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Tops / bodies</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Camisas</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Shorts y bermudas</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Bolsos</a>
       <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="#historia">Editorial</a>
     </div>
   </nav>
@@ -243,14 +247,6 @@
         </span>
       </a>
       <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
-        <img alt="Camisa oversize de rayas cafés con short negro, ejemplo de la categoría Ropa." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/F789B7CD-F65D-4EFB-B03C-7E77F8917DE2.webp">
-        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
-        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
-          <span class="font-label-upper text-label-upper uppercase text-white">Ropa</span>
-          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
-        </span>
-      </a>
-      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
         <img alt="Conjunto de blazer y short en rosa pastel con botones dorados, ejemplo de la categoría Sets." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/65B7F186-2ABB-439E-9B15-29B369EDF803.webp">
         <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
         <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
@@ -259,10 +255,67 @@
         </span>
       </a>
       <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
-        <img alt="Dos bolsos de piel con tachuelas, negro y gris, sobre bases doradas en la tienda LUMANE, ejemplo de la categoría Accesorios." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/DEEB2F5C-2EA4-4C0E-8F61-DE52DFCE5E72.webp">
+        <img alt="Modelo con top acanalado sin mangas y pantalón ancho en tono crudo, ejemplo de la categoría Pantalones." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/DDD64602-84D9-4232-AA73-373E110AB4C1.webp">
         <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
         <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
-          <span class="font-label-upper text-label-upper uppercase text-white">Accesorios</span>
+          <span class="font-label-upper text-label-upper uppercase text-white">Pantalones</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
+        <img alt="Modelo con chaleco entallado de rayas en tono crema, ejemplo de la categoría Suéters y cardigans." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/6D2D5586-9F20-48CF-A516-85348B6C4C4F.webp">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Suéters / cardigans</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
+        <img alt="Modelo con camisa oversize de lino café, ejemplo de la categoría Abrigos." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/8ABAC1F6-0173-42A7-B942-A010402AC7D7.jpg">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Abrigos</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
+        <img alt="Modelo con top de cuello alto sin mangas, ejemplo de la categoría Tops y bodies." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/D89112B8-BCD7-401F-8D7A-7963C64B3C7D.webp">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Tops / bodies</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
+        <img alt="Modelo con camisa de estampado geométrico en blanco y negro, ejemplo de la categoría Camisas." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/6DF08EAA-88F5-4A39-A78E-66BCAA665F8E.webp">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Camisas</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
+        <img alt="Modelo con camisa de rayas cafés y short negro, ejemplo de la categoría Shorts y bermudas." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/F789B7CD-F65D-4EFB-B03C-7E77F8917DE2.webp">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Shorts y bermudas</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="lumane2f-catalogo.html">
+        <img alt="Dos bolsos de piel con tachuelas, negro y gris, sobre bases doradas en la tienda LUMANE, ejemplo de la categoría Bolsos." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/DEEB2F5C-2EA4-4C0E-8F61-DE52DFCE5E72.webp">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Bolsos</span>
+          <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+        </span>
+      </a>
+      <a class="tile group relative block overflow-hidden bg-editorial-ink aspect-[3/4]" href="#t-novedades">
+        <img alt="Modelo con conjunto de top y falda corta de lunares blanco y negro, ejemplo de las Novedades." class="tile-media w-full h-full object-cover" src="fotos%20lumane%20rops/IMG_1927-Mejorado-NR.webp">
+        <span class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></span>
+        <span class="absolute top-4 left-4 z-10 bg-accent-red text-on-primary font-label-upper text-[10px] uppercase px-2 py-1">Nuevo</span>
+        <span class="absolute inset-x-0 bottom-0 p-5 flex items-center justify-between">
+          <span class="font-label-upper text-label-upper uppercase text-white">Novedades</span>
           <span class="material-symbols-outlined text-white text-[18px] opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
         </span>
       </a>
@@ -491,10 +544,15 @@
     <div class="col-span-1 lg:col-span-2">
       <h3 class="font-label-upper text-label-upper uppercase mb-5">Tienda</h3>
       <ul class="flex flex-col gap-3 font-body-md text-body-md text-white/60">
-        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Ropa</a></li>
         <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Vestidos</a></li>
         <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Sets</a></li>
-        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Accesorios</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Pantalones</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Suéters / cardigans</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Abrigos</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Tops / bodies</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Camisas</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Shorts y bermudas</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Bolsos</a></li>
       </ul>
     </div>
     <div class="col-span-1 lg:col-span-2">
@@ -535,20 +593,28 @@
 </footer>
 
 <script>
-  /* En pantallas táctiles no hay hover: las fotos toman color al entrar en pantalla. */
+  /* En pantallas táctiles no hay hover: la fotografía toma color al presionar la tarjeta. */
   (function () {
     var cards = [].slice.call(document.querySelectorAll('.p-card'));
     if (!cards.length) { return; }
-    var revealAll = function () { cards.forEach(function (c) { c.classList.add('in-view'); }); };
-    if (!('IntersectionObserver' in window)) { revealAll(); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); } });
-    }, { threshold: 0.35 });
-    cards.forEach(function (c) { io.observe(c); });
-    /* Red de seguridad: si el observador no responde, mostramos el color igualmente. */
-    setTimeout(function () {
-      if (!document.querySelector('.p-card.in-view')) { revealAll(); }
-    }, 1200);
+    var evt = window.PointerEvent ? 'pointerdown' : 'touchstart';
+    var active = null;
+    var clear = function () {
+      if (active) { active.classList.remove('is-pressed'); active = null; }
+    };
+    var press = function (e) {
+      if (e.pointerType === 'mouse') { return; }
+      var card = e.currentTarget;
+      if (active === card) { clear(); return; }
+      clear();
+      active = card;
+      card.classList.add('is-pressed');
+    };
+    cards.forEach(function (c) { c.addEventListener(evt, press, { passive: true }); });
+    /* Al presionar fuera, la fotografía vuelve al blanco y negro. */
+    document.addEventListener(evt, function (e) {
+      if (active && !active.contains(e.target)) { clear(); }
+    }, { passive: true });
   })();
 </script>
 </body>

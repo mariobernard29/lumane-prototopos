@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LUMANE — Catálogo</title>
-<meta name="description" content="Catálogo LUMANE. Vestidos, conjuntos, blusas y accesorios de la colección de temporada.">
+<meta name="description" content="Catálogo LUMANE. Vestidos, sets, pantalones, abrigos, camisas, bolsos y más de la colección de temporada.">
 <link rel="icon" type="image/png" href="icon%20lumane.png">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,7 +121,7 @@
   @media (hover:none) {
     .p-media { filter:none; }
     html.js .p-media { filter:grayscale(1) contrast(1.04); }
-    html.js .p-card.in-view .p-media { filter:none; }
+    html.js .p-card.is-pressed .p-media { filter:none; }
     .p-caption { opacity:1; transform:none; }
     .p-rule { transform:scaleX(1); }
   }
@@ -136,9 +136,8 @@
     .p-card:hover .p-rule, .p-card:focus-visible .p-rule { transform:scaleX(1); }
   }
 
-  .tile-media { filter:grayscale(1); transition:filter .6s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
-  .tile:hover .tile-media, .tile:focus-visible .tile-media { filter:none; transform:scale(1.06); }
-  @media (hover:none) { .tile-media { filter:none; } }
+  .tile-media { transition:transform .8s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .tile-media, .tile:focus-visible .tile-media { transform:scale(1.06); }
   .tile:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
   /* Filtros: acordeón en móvil, panel fijo en escritorio */
@@ -174,10 +173,16 @@
   </div>
   <nav aria-label="Categorías" class="border-t border-surface-variant">
     <div class="flex items-center justify-start md:justify-center gap-7 md:gap-10 h-11 px-5 sm:px-margin-edge overflow-x-auto no-scrollbar">
-      <a aria-current="page" class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-primary transition-colors" href="lumane2f-catalogo.html">Ropa</a>
+      <a aria-current="page" class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-primary transition-colors" href="lumane2f-catalogo.html">Todo</a>
       <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Vestidos</a>
       <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Sets</a>
-      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Accesorios</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Pantalones</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Suéters / cardigans</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Abrigos</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Tops / bodies</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Camisas</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Shorts y bermudas</a>
+      <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-catalogo.html">Bolsos</a>
       <a class="nav-item font-nav-link text-nav-link uppercase whitespace-nowrap text-secondary hover:text-primary transition-colors" href="lumane2f-inicio.html#historia">Editorial</a>
     </div>
   </nav>
@@ -217,12 +222,16 @@
           <div>
             <h2 class="font-label-upper text-label-upper uppercase border-b border-primary pb-2 mb-4">Categoría</h2>
             <ul class="flex flex-col gap-3 font-body-md text-body-md">
-              <li><a class="flex justify-between items-center text-primary font-medium group" href="lumane2f-catalogo.html"><span class="group-hover:text-accent-red transition-colors">Todo</span><span class="text-text-muted font-price text-price">(86)</span></a></li>
+              <li><a class="flex justify-between items-center text-primary font-medium group" href="lumane2f-catalogo.html"><span class="group-hover:text-accent-red transition-colors">Todo</span><span class="text-text-muted font-price text-price">(95)</span></a></li>
               <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Vestidos</span><span class="text-text-muted font-price text-price">(18)</span></a></li>
-              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Blusas y camisas</span><span class="text-text-muted font-price text-price">(21)</span></a></li>
-              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Conjuntos y sets</span><span class="text-text-muted font-price text-price">(27)</span></a></li>
-              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Pantalones y bermudas</span><span class="text-text-muted font-price text-price">(12)</span></a></li>
-              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Accesorios</span><span class="text-text-muted font-price text-price">(8)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Sets</span><span class="text-text-muted font-price text-price">(14)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Pantalones</span><span class="text-text-muted font-price text-price">(10)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Suéters / cardigans</span><span class="text-text-muted font-price text-price">(9)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Abrigos</span><span class="text-text-muted font-price text-price">(6)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Tops / bodies</span><span class="text-text-muted font-price text-price">(12)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Camisas</span><span class="text-text-muted font-price text-price">(11)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Shorts y bermudas</span><span class="text-text-muted font-price text-price">(8)</span></a></li>
+              <li><a class="flex justify-between items-center text-secondary hover:text-primary transition-colors group" href="lumane2f-catalogo.html"><span>Bolsos</span><span class="text-text-muted font-price text-price">(7)</span></a></li>
             </ul>
           </div>
 
@@ -237,16 +246,6 @@
               <button class="h-10 border border-outline-variant text-secondary hover:border-primary hover:text-primary transition-colors font-nav-link text-nav-link">XL</button>
             </div>
             <p class="font-body-md text-[13px] text-text-muted mt-3">Equivalencias MX 34 – 42. <a class="underline underline-offset-4 hover:text-accent-red transition-colors" href="#">Ver guía de tallas</a></p>
-          </div>
-
-          <!-- Precio -->
-          <div>
-            <h2 class="font-label-upper text-label-upper uppercase border-b border-primary pb-2 mb-4">Precio</h2>
-            <ul class="flex flex-col gap-3 font-body-md text-body-md text-secondary">
-              <li><label class="flex items-center gap-3 cursor-pointer hover:text-primary transition-colors"><input class="w-4 h-4 border-outline text-primary focus:ring-0 focus:ring-offset-0" type="checkbox"> Hasta $5,000 MXN</label></li>
-              <li><label class="flex items-center gap-3 cursor-pointer hover:text-primary transition-colors"><input checked class="w-4 h-4 border-outline text-primary focus:ring-0 focus:ring-offset-0" type="checkbox"> $5,000 – $10,000 MXN</label></li>
-              <li><label class="flex items-center gap-3 cursor-pointer hover:text-primary transition-colors"><input class="w-4 h-4 border-outline text-primary focus:ring-0 focus:ring-offset-0" type="checkbox"> Más de $10,000 MXN</label></li>
-            </ul>
           </div>
 
           <!-- Color -->
@@ -453,10 +452,15 @@
     <div class="col-span-1 lg:col-span-2">
       <h3 class="font-label-upper text-label-upper uppercase mb-5">Tienda</h3>
       <ul class="flex flex-col gap-3 font-body-md text-body-md text-white/60">
-        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Ropa</a></li>
         <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Vestidos</a></li>
         <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Sets</a></li>
-        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Accesorios</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Pantalones</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Suéters / cardigans</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Abrigos</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Tops / bodies</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Camisas</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Shorts y bermudas</a></li>
+        <li><a class="hover:text-white transition-colors" href="lumane2f-catalogo.html">Bolsos</a></li>
       </ul>
     </div>
     <div class="col-span-1 lg:col-span-2">
@@ -497,7 +501,7 @@
 </footer>
 
 <script>
-  /* En pantallas táctiles no hay hover: las fotos toman color al entrar en pantalla. */
+  /* En pantallas táctiles no hay hover: la fotografía toma color al presionar la tarjeta. */
   /* En escritorio el panel de filtros siempre queda desplegado, aunque
      se haya cerrado antes en una pantalla pequeña. */
   (function () {
@@ -513,16 +517,24 @@
   (function () {
     var cards = [].slice.call(document.querySelectorAll('.p-card'));
     if (!cards.length) { return; }
-    var revealAll = function () { cards.forEach(function (c) { c.classList.add('in-view'); }); };
-    if (!('IntersectionObserver' in window)) { revealAll(); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); } });
-    }, { threshold: 0.35 });
-    cards.forEach(function (c) { io.observe(c); });
-    /* Red de seguridad: si el observador no responde, mostramos el color igualmente. */
-    setTimeout(function () {
-      if (!document.querySelector('.p-card.in-view')) { revealAll(); }
-    }, 1200);
+    var evt = window.PointerEvent ? 'pointerdown' : 'touchstart';
+    var active = null;
+    var clear = function () {
+      if (active) { active.classList.remove('is-pressed'); active = null; }
+    };
+    var press = function (e) {
+      if (e.pointerType === 'mouse') { return; }
+      var card = e.currentTarget;
+      if (active === card) { clear(); return; }
+      clear();
+      active = card;
+      card.classList.add('is-pressed');
+    };
+    cards.forEach(function (c) { c.addEventListener(evt, press, { passive: true }); });
+    /* Al presionar fuera, la fotografía vuelve al blanco y negro. */
+    document.addEventListener(evt, function (e) {
+      if (active && !active.contains(e.target)) { clear(); }
+    }, { passive: true });
   })();
 </script>
 </body>

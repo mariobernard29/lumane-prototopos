@@ -125,12 +125,12 @@
   .p-card:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
   /* Dispositivos táctiles: sin cursor no hay hover.
-     El nombre y el precio se muestran siempre, y el color entra
-     cuando la tarjeta aparece en pantalla. */
+     El nombre y el precio se muestran siempre, y la fotografía
+     toma color al presionar la tarjeta. */
   @media (hover:none) {
     .p-media { filter:none; }
     html.js .p-media { filter:grayscale(1) contrast(1.04); }
-    html.js .p-card.in-view .p-media { filter:none; }
+    html.js .p-card.is-pressed .p-media { filter:none; }
     .p-caption { opacity:1; transform:none; }
     .p-rule { transform:scaleX(1); }
   }
@@ -148,16 +148,15 @@
   }
 
   /* Mosaicos de categoría y galería */
-  .tile-media { filter:grayscale(1); transition:filter .6s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
-  .tile:hover .tile-media, .tile:focus-visible .tile-media { filter:none; transform:scale(1.06); }
-  @media (hover:none) { .tile-media { filter:none; } }
+  .tile-media { transition:transform .8s cubic-bezier(.2,.7,.2,1); }
+  .tile:hover .tile-media, .tile:focus-visible .tile-media { transform:scale(1.06); }
   .tile:focus-visible { outline:2px solid #000000; outline-offset:4px; }
 
-  /* Portada: la fotografía entra en blanco y negro y toma color */
-  .hero-media { filter:grayscale(1); transform:scale(1.06); animation:heroReveal 1.9s cubic-bezier(.2,.7,.2,1) .2s forwards; }
-  @keyframes heroReveal { to { filter:grayscale(0); transform:scale(1); } }
+  /* Portada: la fotografía entra a color con un ligero acercamiento */
+  .hero-media { transform:scale(1.06); animation:heroReveal 1.9s cubic-bezier(.2,.7,.2,1) .2s forwards; }
+  @keyframes heroReveal { to { transform:scale(1); } }
   @media (prefers-reduced-motion:reduce) {
-    .hero-media { animation:none; filter:none; transform:none; }
+    .hero-media { animation:none; transform:none; }
     .p-media, .tile-media, .p-caption { transition:none; }
   }
 </style>
@@ -535,20 +534,28 @@
 </footer>
 
 <script>
-  /* En pantallas táctiles no hay hover: las fotos toman color al entrar en pantalla. */
+  /* En pantallas táctiles no hay hover: la fotografía toma color al presionar la tarjeta. */
   (function () {
     var cards = [].slice.call(document.querySelectorAll('.p-card'));
     if (!cards.length) { return; }
-    var revealAll = function () { cards.forEach(function (c) { c.classList.add('in-view'); }); };
-    if (!('IntersectionObserver' in window)) { revealAll(); return; }
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); } });
-    }, { threshold: 0.35 });
-    cards.forEach(function (c) { io.observe(c); });
-    /* Red de seguridad: si el observador no responde, mostramos el color igualmente. */
-    setTimeout(function () {
-      if (!document.querySelector('.p-card.in-view')) { revealAll(); }
-    }, 1200);
+    var evt = window.PointerEvent ? 'pointerdown' : 'touchstart';
+    var active = null;
+    var clear = function () {
+      if (active) { active.classList.remove('is-pressed'); active = null; }
+    };
+    var press = function (e) {
+      if (e.pointerType === 'mouse') { return; }
+      var card = e.currentTarget;
+      if (active === card) { clear(); return; }
+      clear();
+      active = card;
+      card.classList.add('is-pressed');
+    };
+    cards.forEach(function (c) { c.addEventListener(evt, press, { passive: true }); });
+    /* Al presionar fuera, la fotografía vuelve al blanco y negro. */
+    document.addEventListener(evt, function (e) {
+      if (active && !active.contains(e.target)) { clear(); }
+    }, { passive: true });
   })();
 </script>
 </body>

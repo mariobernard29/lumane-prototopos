@@ -9,8 +9,8 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- ===== TIPOGRAFÍA · VARIANTE B: Cormorant Garamond (display) + Manrope (texto) ===== -->
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<!-- ===== TIPOGRAFÍA · VARIANTE F: Instrument Serif (display) + Figtree (texto) ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
   tailwind.config = {
@@ -45,24 +45,24 @@
           "section-v-md": "80px",
           "section-v-lg": "128px"
         },
-        /* ===== TIPOGRAFÍA · VARIANTE B =====
-           Display / titulares .......... "Cormorant Garamond"
-           Texto, navegación y etiquetas  "Manrope"
+        /* ===== TIPOGRAFÍA · VARIANTE F =====
+           Display / titulares .......... "Instrument Serif"
+           Texto, navegación y etiquetas  "Figtree"
            Para generar otra variante basta con cambiar los valores de este
            bloque y el <link> de Google Fonts de arriba. Nada más. */
         fontFamily: {
-          "display-xl":        ["Cormorant Garamond", "Georgia", "serif"],
-          "display-xl-mobile": ["Cormorant Garamond", "Georgia", "serif"],
-          "headline-lg":       ["Cormorant Garamond", "Georgia", "serif"],
-          "headline-lg-mobile":["Cormorant Garamond", "Georgia", "serif"],
-          "headline-md":       ["Cormorant Garamond", "Georgia", "serif"],
-          "headline-sm":       ["Cormorant Garamond", "Georgia", "serif"],
-          "quote":             ["Cormorant Garamond", "Georgia", "serif"],
-          "body-lg":           ["Manrope", "Helvetica Neue", "sans-serif"],
-          "body-md":           ["Manrope", "Helvetica Neue", "sans-serif"],
-          "nav-link":          ["Manrope", "Helvetica Neue", "sans-serif"],
-          "label-upper":       ["Manrope", "Helvetica Neue", "sans-serif"],
-          "price":             ["Manrope", "Helvetica Neue", "sans-serif"]
+          "display-xl":        ["Instrument Serif", "Georgia", "serif"],
+          "display-xl-mobile": ["Instrument Serif", "Georgia", "serif"],
+          "headline-lg":       ["Instrument Serif", "Georgia", "serif"],
+          "headline-lg-mobile":["Instrument Serif", "Georgia", "serif"],
+          "headline-md":       ["Instrument Serif", "Georgia", "serif"],
+          "headline-sm":       ["Instrument Serif", "Georgia", "serif"],
+          "quote":             ["Instrument Serif", "Georgia", "serif"],
+          "body-lg":           ["Figtree", "Helvetica Neue", "sans-serif"],
+          "body-md":           ["Figtree", "Helvetica Neue", "sans-serif"],
+          "nav-link":          ["Figtree", "Helvetica Neue", "sans-serif"],
+          "label-upper":       ["Figtree", "Helvetica Neue", "sans-serif"],
+          "price":             ["Figtree", "Helvetica Neue", "sans-serif"]
         },
         fontSize: {
           "display-xl":        ["112px", { lineHeight: "0.9",  letterSpacing: "-0.035em", fontWeight: "400" }],
@@ -114,12 +114,11 @@
 <header class="w-full border-b border-primary bg-paper-bright sticky top-0 z-50">
   <div class="relative flex items-center justify-between h-16 px-5 sm:px-margin-edge">
     <div class="flex items-center gap-5">
-      <a aria-label="Seguir comprando" class="flex items-center gap-2 font-label-upper text-[10px] uppercase tracking-[0.16em] text-secondary hover:text-accent-red transition-colors" href="lumane2b-catalogo.html">
+      <a aria-label="Seguir comprando" class="flex items-center gap-2 font-label-upper text-[10px] uppercase tracking-[0.16em] text-secondary hover:text-accent-red transition-colors" href="catalogo.html">
         <span aria-hidden="true" class="material-symbols-outlined text-[16px]">arrow_back</span> <span class="hidden sm:inline">Seguir comprando</span>
       </a>
-      <a class="border-l border-surface-variant pl-4 sm:pl-5 font-label-upper text-[10px] uppercase tracking-[0.16em] text-secondary hover:text-accent-red transition-colors whitespace-nowrap" href="index.html">← <span class="hidden sm:inline">Volver al </span>Índice</a>
     </div>
-    <a class="absolute left-1/2 -translate-x-1/2 flex items-center" href="lumane2b-inicio.html" aria-label="LUMANE, ir al inicio">
+    <a class="absolute left-1/2 -translate-x-1/2 flex items-center" href="index.html" aria-label="LUMANE, ir al inicio">
       <img alt="LUMANE" class="h-7 md:h-9 w-auto object-contain" src="Lumane_Logotipo-01-convertido-de-webp.png">
     </a>
     <div class="flex items-center gap-2 text-secondary">
@@ -130,7 +129,7 @@
   <!-- Pasos -->
   <nav aria-label="Pasos de la compra" class="border-t border-surface-variant">
     <ol class="flex items-center justify-start md:justify-center gap-5 md:gap-8 h-11 px-5 sm:px-margin-edge overflow-x-auto no-scrollbar font-label-upper text-[10px] uppercase tracking-[0.16em]">
-      <li><a class="text-secondary hover:text-primary transition-colors whitespace-nowrap" href="lumane2b-catalogo.html">01 · Bolsa</a></li>
+      <li><a class="text-secondary hover:text-primary transition-colors whitespace-nowrap" href="catalogo.html">01 · Bolsa</a></li>
       <li aria-hidden="true" class="text-outline-variant">—</li>
       <li><span aria-current="step" class="text-primary border-b-2 border-accent-red pb-1 whitespace-nowrap">02 · Envío y pago</span></li>
       <li aria-hidden="true" class="text-outline-variant">—</li>
@@ -144,7 +143,7 @@
   <!-- ============ FORMULARIO ============ -->
   <div class="lg:col-span-7 lg:pr-8">
     <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-3">Finalizar compra</h1>
-    <p class="font-body-md text-body-md text-secondary mb-12">¿Ya tienes cuenta? <a class="text-primary underline underline-offset-4 hover:text-accent-red transition-colors" href="#">Inicia sesión</a> y completamos tus datos.</p>
+    <p class="font-body-md text-body-md text-secondary mb-12">¿Ya tienes cuenta? <a class="text-primary underline underline-offset-4 hover:text-accent-red transition-colors" href="cuenta.html">Inicia sesión</a> y completamos tus datos.</p>
 
     <form onsubmit="event.preventDefault();">
       <!-- 01 Contacto -->
@@ -334,19 +333,19 @@
     <div class="lg:sticky lg:top-[128px] border border-primary bg-surface p-6 md:p-9">
       <div class="flex items-baseline justify-between border-b border-primary pb-4 mb-7">
         <h2 id="t-resumen" class="font-headline-md text-headline-md">Tu bolsa</h2>
-        <a class="font-label-upper text-label-upper uppercase text-secondary hover:text-accent-red transition-colors" href="lumane2b-catalogo.html">Editar</a>
+        <a class="font-label-upper text-label-upper uppercase text-secondary hover:text-accent-red transition-colors" href="catalogo.html">Editar</a>
       </div>
 
       <!-- Artículos -->
       <ul class="flex flex-col gap-6 border-b border-surface-variant pb-7 mb-7">
         <li class="flex gap-5">
-          <a class="relative w-24 h-32 flex-shrink-0 overflow-hidden border border-surface-variant bg-editorial-ink" href="lumane2b-producto.html">
+          <a class="relative w-24 h-32 flex-shrink-0 overflow-hidden border border-surface-variant bg-editorial-ink" href="producto.html">
             <img alt="Conjunto de camisa y pantalón ancho en negro con estampado geométrico de líneas blancas." class="w-full h-full object-cover" src="fotos%20lumane%20rops/6DF08EAA-88F5-4A39-A78E-66BCAA665F8E.webp">
             <span class="absolute top-0 right-0 bg-accent-red text-on-primary font-label-upper text-[10px] px-2 py-1 leading-none">1</span>
           </a>
           <div class="flex-grow flex flex-col justify-between">
             <div>
-              <a class="font-body-md text-body-md hover:text-accent-red transition-colors" href="lumane2b-producto.html">Conjunto Estructurado Ônix</a>
+              <a class="font-body-md text-body-md hover:text-accent-red transition-colors" href="producto.html">Conjunto Estructurado Ônix</a>
               <p class="font-label-upper text-label-upper uppercase text-secondary mt-1">Talla 38 · Color Ônix</p>
             </div>
             <p class="font-price text-price text-right">$ 12,500.00 MXN</p>
@@ -398,13 +397,14 @@
 <!-- ===================== PIE TRANSACCIONAL ===================== -->
 <footer class="bg-editorial-ink text-on-tertiary">
   <div class="px-5 sm:px-margin-edge py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-    <a class="inline-block" href="lumane2b-inicio.html"><img alt="LUMANE" class="h-7 w-auto object-contain brightness-0 invert" src="Lumane_Logotipo-01-convertido-de-webp.png"></a>
+    <a class="inline-block" href="index.html"><img alt="LUMANE" class="h-7 w-auto object-contain brightness-0 invert" src="Lumane_Logotipo-01-convertido-de-webp.png"></a>
     <div class="flex flex-wrap justify-center gap-6 font-label-upper text-[10px] uppercase tracking-[0.16em] text-white/60">
+      <a class="hover:text-white transition-colors" href="cuenta.html">Mi cuenta</a>
       <a class="hover:text-white transition-colors" href="#">Ayuda</a>
       <a class="hover:text-white transition-colors" href="#">Envíos y devoluciones</a>
       <a class="hover:text-white transition-colors" href="#">Privacidad</a>
       <a class="hover:text-white transition-colors" href="#">Términos</a>
-      <a class="hover:text-white transition-colors" href="lumane2b-inicio.html">Inicio</a>
+      <a class="hover:text-white transition-colors" href="index.html">Inicio</a>
     </div>
     <p class="font-label-upper text-[10px] uppercase tracking-[0.16em] text-white/50">© 2026 LUMANE</p>
   </div>
